@@ -1,0 +1,22 @@
+from tkinter import *
+def btcalc():
+    entrada = int(num.get())
+    for c in range(1,11):
+        texto = Label(janela, text=f'{entrada} x {c} = {c * entrada}')
+        texto.grid(column=0, row=3+c)
+janela = Tk()
+
+janela.geometry("400x300")
+
+num = Entry(janela)
+num.grid(column=1, row=0)
+
+janela.title("tabuada completa")
+
+texto2 = Label(janela, text="coloque seu numero aqui:")
+texto2.grid(column=0, row=0)
+bt = Button(janela, text="calcular",command=btcalc)
+bt.grid(column=2, row=0)
+
+
+janela.mainloop()
